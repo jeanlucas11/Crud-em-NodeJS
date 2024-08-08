@@ -23,7 +23,6 @@ server.get("/cursos/:index", async (req: Request, res: Response) => {
 // Retorna todos os cursos
 server.get("/cursos", async (req: Request, res: Response) => {
   const cursos = await prisma.cursos.findMany();
-
   return res.json(cursos);
 });
 
